@@ -6,13 +6,31 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: {
+          dark: '#1B262C', // Dark mode primary color
+          light: '#BBE1FA', // Light mode primary color
+        },
+        secondary: {
+          dark: '#0F4C75', // Dark mode secondary color
+          light: '#3282B8', // Light mode secondary color
+        },
+        accent: {
+          dark: '#3282B8', // Dark mode accent color
+          light: '#0F4C75', // Light mode accent color
+        },
+        background: {
+          dark: '#1B262C', // Dark mode background color
+          light: '#FFFFFF', // Light mode background color (example)
+        },
       },
+      fontFamily: {
+        lato: ["var(--font-lato)"],
+        inter: ["var(--font-inter)"]
+      }
     },
   },
   plugins: [],
