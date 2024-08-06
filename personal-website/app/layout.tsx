@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import { Inter, Lato } from "next/font/google";
 import "./globals.css";
+import { classNameCombiner } from "@/utils";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-in" });
-const lato = Lato({ subsets: ["latin"], display: "swap", variable: "--font-lato", weight: ["400"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-in",
+});
+const lato = Lato({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${lato.variable} font-lato bg-light dark:bg-dark`}>{children}</body>
+      <body
+        className={classNameCombiner(
+          inter.variable,
+          lato.variable,
+          "font-lato bg-light dark:bg-dark"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
