@@ -16,6 +16,7 @@ const Header = () => {
             {item.label}
           </Link>
         ))}
+        <button>ThemeSwitcher</button>
       </nav>
     </header>
   );
