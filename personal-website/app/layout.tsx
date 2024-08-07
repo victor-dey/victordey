@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 import { classNameCombiner } from "@/utils";
+import Header from "@/components/Header/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
           "font-lato bg-light dark:bg-dark"
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
