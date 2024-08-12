@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 import { classNameCombiner } from "@/utils";
-import Header from "@/components/Header/header";
+import Header from "@/Header/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,11 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classNameCombiner(
-          inter.variable,
-          lato.variable,
-          "font-lato bg-light dark:bg-dark"
-        )}
+        className={`${inter.variable}`}
+        // (inter.variable, lato.variable, "font-lato bg-light dark:bg-dark")
       >
         <Header />
         {children}
