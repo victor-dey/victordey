@@ -1,8 +1,8 @@
 import { NavItem } from "@/app/StandardTypes/StandardTypes";
 import Link from "next/link";
 import React from "react";
-import SocialLinks from "@/Header/socialLinks/SocialLinks";
-import ToggleButton from "@/Header/toggleButton/ToggleButton";
+import SocialLinks from "./socialLinks/SocialLinks";
+import ToggleButton from "./toggleButton/ToggleButton";
 
 const navItems: NavItem[] = [
   { link: "/", label: "Home", style: "ms-1" },
