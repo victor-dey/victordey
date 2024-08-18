@@ -10,22 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          dark: "#1B262C", // Dark mode primary color
-          light: "#BBE1FA", // Light mode primary color
-        },
-        secondary: {
-          dark: "#0F4C75", // Dark mode secondary color
-          light: "#3282B8", // Light mode secondary color
-        },
-        accent: {
-          dark: "#3282B8", // Dark mode accent color
-          light: "#0F4C75", // Light mode accent color
-        },
-        background: {
-          dark: "#1B262C", // Dark mode background color
-          light: "#FFFFFF", // Light mode background color
-        },
+        primary: "rgb(var(--color-primary))",
+        secondary: "rgb(var(--color-secondary))",
+        foreground: "rgb(var(--color-foreground))",
+        background: "rgb(var(--color-background))",
       },
       fontFamily: {
         lato: ["var(--font-lato)"],

@@ -1,4 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@fortawesome/fontawesome-svg-core/styles.css";
+
+:root {
+  --light-green: 131 242 143;
+  --light-blue: 165 196 212;
+  --dark-green: 17 100 102;
+  --dark-blue: 18 60 105;
+  --not-white: 247 241 255;
+  --not-black: 10 14 20;
+  --black: 0 0 0;
+
+  --color-primary: var(--light-green);
+  --color-secondary: var(--light-blue);
+  --color-foreground: var(--not-black);
+  --color-background: var(--not-white);
+
+  --max-width: 650px;
+  --border-radius: 5px;
+  --transition-duration: 0.1s;
+}
+[data-color-scheme="dark"] {
+  --color-primary: var(--dark-green);
+  --color-secondary: var(--dark-blue);
+  --color-foreground: var(--not-white);
+  --color-background: var(--black);
+}
