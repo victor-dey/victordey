@@ -12,18 +12,21 @@ const navItems: NavItem[] = [
 ];
 const Header = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center p-4">
       <nav className="flex flex-col sticky">
         {navItems.map((item) => (
-          <Link
-            className={`${item.style} text-primary hover:underline`}
-            href={item.link}
-          >
+          <Link className={`${item.style} hover:underline`} href={item.link}>
             {item.label}
           </Link>
         ))}
         <div>
           <ToggleButton></ToggleButton>
+        </div>
+        <div>
+          <a target="_black" href="/" className="link-base">
+            {" "}
+            some text that should{" "}
+          </a>
         </div>
         <div className="">
           <SocialLinks></SocialLinks>

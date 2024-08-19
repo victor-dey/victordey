@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 import Header from "./Header/header";
+import Footer from "./Footer/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${inter.variable}${lato.variable}`}>
         <Header />
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

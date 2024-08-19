@@ -5,7 +5,7 @@ const ToggleButton = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.setAttribute("data-color-scheme", theme);
   }, [theme]);
 
   function toggleTheme() {
