@@ -12,8 +12,8 @@ const navItems: NavItem[] = [
 ];
 const Header = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-4">
-      <nav className="flex flex-col sticky">
+    <div className="flex flex-row items-center justify-center p-4">
+      <nav className="flex flex-row sticky">
         {navItems.map((item) => (
           <Link className={`${item.style} hover:underline`} href={item.link}>
             {item.label}
@@ -22,34 +22,11 @@ const Header = () => {
         <div>
           <ToggleButton></ToggleButton>
         </div>
-        <div>
-          <a target="_black" href="/" className="link-base">
-            {" "}
-            some text that should{" "}
-          </a>
-        </div>
         <div className="">
           <SocialLinks></SocialLinks>
         </div>
       </nav>
       <header></header>
-
-      {/* <nav>
-          <Link href={"/About"}>About </Link>
-          <Link href={"/Blog"}>About </Link>
-          <ToggleButton></ToggleButton>
-        </nav> */}
-
-      {/* {navItems.map((item) => (
-            
-           
-            // <Link
-            //   className={`${item.style} hover:underline ms-1`}
-            //   href={item.link}
-            // >
-            //   {item.label}
-            // </Link>
-          ))} */}
     </div>
   );
 };

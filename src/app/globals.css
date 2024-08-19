@@ -38,12 +38,3 @@
     @apply text-primary hover:underline;
   }
 }
-/* [data-color-scheme="dark"] {
-  background-color: rgb(131 242 143);
-  color: rgb(17 100 102);
-}
-
-[data-color-scheme="light"] {
-  background-color: rgb(17 100 102);
-  color: rgb(247 241 255);
-} */

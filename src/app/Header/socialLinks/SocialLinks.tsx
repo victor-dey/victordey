@@ -25,7 +25,6 @@ const SocialLinks = () => {
           icon={faLinkedin}
         />
       </a>
-      <div className="text-primary">Big ass Div</div>
     </div>
   );
 };
