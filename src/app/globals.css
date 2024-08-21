@@ -35,6 +35,6 @@
 
 @layer components {
   .link-base {
-    @apply text-primary hover:underline;
+    @apply text-primary visited:no-underline hover:underline flex;
   }
 }
