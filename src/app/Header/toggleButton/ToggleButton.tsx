@@ -15,13 +15,11 @@ const ToggleButton = () => {
   }
   return (
     <div>
-      <button
-        className="me-1 link-base hover:scale-105 transition-all ease duration-200"
-        onClick={toggleTheme}
-      >
+      <button className="me-1 link-base" onClick={toggleTheme}>
         <FontAwesomeIcon
           icon={theme === "dark" ? faSun : faMoon}
-          size="lg"
+          size="2x"
+          className="me-5"
         ></FontAwesomeIcon>
       </button>
     </div>

@@ -13,8 +13,9 @@ const SocialLinks = () => {
           target="_blank"
         >
           <FontAwesomeIcon
-            className="hover:scale-105 transition-all ease duration-200"
+            className="me-1 hover:scale-105 transition-all ease duration-200"
             icon={faGithub}
+            size="2x"
           />
         </a>
       </div>
@@ -25,8 +26,9 @@ const SocialLinks = () => {
           target="_blank"
         >
           <FontAwesomeIcon
-            className="hover:scale-105 transition-all ease duration-200"
+            className="ms-1 hover:scale-105 transition-all ease duration-200"
             icon={faLinkedin}
+            size="2x"
           />
         </a>
       </div>
