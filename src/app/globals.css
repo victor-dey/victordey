@@ -12,7 +12,7 @@
     --not-black: 10 14 20;
     --black: 0 0 0;
 
-    --color-primary: var(--light-green);
+    --color-primary: var(--dark-green);
     --color-secondary: var(--light-blue);
     --color-foreground: var(--not-black);
     --color-background: var(--not-white);
@@ -22,7 +22,7 @@
     --transition-duration: 0.1s;
   }
   [data-color-scheme="dark"] {
-    --color-primary: var(--dark-green);
+    --color-primary: var(--light-green);
     --color-secondary: var(--dark-blue);
     --color-foreground: var(--not-white);
     --color-background: var(--black);
