@@ -1,8 +1,9 @@
 "use client";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-
+import { navItems } from "./navItems";
+import Link from "next/link";
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
   function toggleSidebarVisibility() {
@@ -13,18 +14,32 @@ const Sidebar = () => {
       <div>
         <button
           onClick={toggleSidebarVisibility}
-          className="md:hidden fixed flex-1 top-4 right-4 z-50 bg-background text-primary p-2"
+          className="md:hidden fixed flex-1 top-4 right-4 bg-background text-primary p-2"
         >
-          <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+          <FontAwesomeIcon size="2x" icon={faBars}></FontAwesomeIcon>
         </button>
       </div>
-      <div className=" flex-1 pt-5 items-center justify-between p-4">
-        <h1>this is the sidebar</h1>
-        <h4>This is the content</h4>
+      <div
+        className={`fixed top-0 left-0 h-full bg-background text-primary w-full transform ${
+          open ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out`}
+      >
+        {open && (
+          <button
+            onClick={toggleSidebarVisibility}
+            className="md:hidden fixed flex-1 top-4 right-4 z-60 bg-background text-primary p-2"
+          >
+            <FontAwesomeIcon size="2x" icon={faClose}></FontAwesomeIcon>
+          </button>
+        )}
         <ul>
-          <li>First link</li>
-          <li>Second Link</li>
+          {navItems.map((item) => (
+            <li>
+              <Link href={item.link}>{item.label}</Link>
+            </li>
+          ))}
         </ul>
+        {/* <div>This is the inside of the sidebar content</div> */}
       </div>
     </div>
   );
