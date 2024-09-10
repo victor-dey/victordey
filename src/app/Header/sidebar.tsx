@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { navItems } from "./navItems";
 import Link from "next/link";
+import ToggleButton from "./toggleButton/ToggleButton";
+import SocialLinks from "./socialLinks/SocialLinks";
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
   function toggleSidebarVisibility() {
@@ -32,13 +34,25 @@ const Sidebar = () => {
             <FontAwesomeIcon size="2x" icon={faClose}></FontAwesomeIcon>
           </button>
         )}
-        <ul>
-          {navItems.map((item) => (
-            <li>
-              <Link href={item.link}>{item.label}</Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col pl-12 pt-20">
+          <ul>
+            {navItems.map((item) => (
+              <li>
+                <Link
+                  className="text-4xl leading-normal"
+                  onClick={toggleSidebarVisibility}
+                  href={item.link}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="pt-4 flex flex-row">
+            <ToggleButton></ToggleButton>
+            <SocialLinks></SocialLinks>
+          </div>
+        </div>
         {/* <div>This is the inside of the sidebar content</div> */}
       </div>
     </div>

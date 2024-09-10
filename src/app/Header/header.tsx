@@ -11,14 +11,18 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <div className="flex-1 flex justify-start"></div>
           <div className="flex-1 flex justify-center">
-            {navItems.map((item) => (
-              <Link
-                className={`${item.style} hover:underline `}
-                href={item.link}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <ul className="flex flex-row">
+              {navItems.map((item) => (
+                <li>
+                  <Link
+                    className={`${item.style} hover:underline link-base`}
+                    href={item.link}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="flex-1 flex justify-end pt-3">
             <ToggleButton></ToggleButton>
