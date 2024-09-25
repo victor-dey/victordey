@@ -9,13 +9,20 @@ const Header = () => {
     <div className="md:flex hidden flex-row items-center justify-between p-4">
       <header className="w-full">
         <nav className="flex items-center justify-between">
-          <div className="flex-1 flex justify-start"></div>
+          <div className="flex-1 flex justify-start">
+            <Link
+              className=" hover:underline link-base text-xl font-semibold"
+              href={"/"}
+            >
+              {"Home"}
+            </Link>
+          </div>
           <div className="flex-1 flex justify-center">
-            <ul className="flex flex-row">
+            <ul className="flex flex-row justify-start">
               {navItems.map((item) => (
                 <li>
                   <Link
-                    className={`${item.style} hover:underline link-base`}
+                    className="ms-5 text-xl hover:underline link-base font-semibold"
                     href={item.link}
                   >
                     {item.label}
@@ -24,7 +31,7 @@ const Header = () => {
               ))}
             </ul>
           </div>
-          <div className="flex-1 flex justify-end pt-3">
+          <div className="flex-1 flex justify-end">
             <ToggleButton></ToggleButton>
             <SocialLinks></SocialLinks>
           </div>
